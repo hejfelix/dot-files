@@ -1,0 +1,102 @@
+window:
+  padding:
+    x: 5
+    y: 0
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+  decorations: none
+  startup_mode: Fullscreen
+
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    #style: Regular
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    #style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: JetBrains Mono
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold Italic
+
+  # Point size
+  size: 13.0
+
+themes:
+  nord: &nord
+    primary:
+      background: '0x2E3440'
+      foreground: '0xD8DEE9'
+    cursor:
+      text: '0x2E3440'
+      cursor: '0xD8DEE9'
+    normal:
+      black: '0x3B4252'
+      red: '0xBF616A'
+      green: '0xA3BE8C'
+      yellow: '0xEBCB8B'
+      blue: '0x81A1C1'
+      magenta: '0xB48EAD'
+      cyan: '0x88C0D0'
+      white: '0xE5E9F0'
+    bright:
+      black: '0x4C566A'
+      red: '0xBF616A'
+      green: '0xA3BE8C'
+      yellow: '0xEBCB8B'
+      blue: '0x81A1C1'
+      magenta: '0xB48EAD'
+      cyan: '0x8FBCBB'
+      white: '0xECEFF4'
+
+colors: *nord
+
+shell:
+ program: /bin/bash
+ args:
+   - -c 
+   - tmux
+
+key_bindings:
+  # tmux
+  - { key: T,        mods: Control, chars: "\x02\x63" }
+  - { key: Tab,      mods: Control|Shift,   chars: "\x02\x70" }
+  - { key: Tab,      mods: Control,   chars: "\x02\x6e" }
